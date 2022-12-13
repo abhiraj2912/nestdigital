@@ -7,16 +7,42 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewEmployeeComponent } from './view-employee/view-employee.component';
-import { AddEmployeeComponent } from './add-employee/add-employee.component'
+import { AddEmployeeComponent } from './add-employee/add-employee.component';
+import { AddSecurityComponent } from './add-security/add-security.component';
+import { ViewSecurityComponent } from './view-security/view-security.component';
+import { ViewVistorLogComponent } from './view-vistor-log/view-vistor-log.component';
+import { ViewEmployeeLogComponent } from './view-employee-log/view-employee-log.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component'
 
 const myRoute:Routes=[
   {
     path:"",
+    component:AdminLoginComponent
+  },
+  {
+    path:"addemp",
     component:AddEmployeeComponent
   },
   {
-    path:"view",
+    path:"viewemp",
     component:ViewEmployeeComponent
+  },
+  {
+    path:"vistorlog",
+    component:ViewVistorLogComponent
+  },
+  {
+    path:"emplog",
+    component:ViewEmployeeLogComponent
+  },
+  {
+    path:"addsec",
+    component:AddSecurityComponent
+  },
+  {
+    path:"viewsec",
+    component:ViewSecurityComponent
   }
 
 ]
@@ -25,7 +51,13 @@ const myRoute:Routes=[
   declarations: [
     AppComponent,
     ViewEmployeeComponent,
-    AddEmployeeComponent
+    AddEmployeeComponent,
+    AddSecurityComponent,
+    ViewSecurityComponent,
+    ViewVistorLogComponent,
+    ViewEmployeeLogComponent,
+    AdminNavbarComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

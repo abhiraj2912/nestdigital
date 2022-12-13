@@ -1,0 +1,41 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h2>Visitor Log</h2>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Date</label>
+                    <input name="date" [(ngModel)]="date" type="date" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">name</th>
+                    <th scope="col">purpose</th>
+                    <th scope="col">whomToMeet</th>
+                    <th scope="col">date</th>
+                    <th scope="col">entryTime</th>
+                    <th scope="col">exitTime</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let i of searchData">
+                    <td>{{i.name}}</td>
+                    <td>{{i.purpose}}</td>
+                    <td>{{i.whomToMeet}}</td>
+                    <td>{{i.date}}</td>
+                    <td>{{i.entryTime}}</td>
+                    <td>{{i.exitTime}}</td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
