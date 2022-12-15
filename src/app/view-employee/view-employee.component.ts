@@ -16,18 +16,18 @@ export class ViewEmployeeComponent {
     )
   }
 
-  empCode=""
+  name=""
   searchData:any=[]
   readValues=()=>{
 
-    let data ={"empCode":this.empCode}
+    let data ={"name":this.name}
   console.log(data)
 
   this.api.searchEmployee(data).subscribe(
     (response:any)=>{
       console.log(response)
       if (response.length==0) {
-        alert("invalid employee code")
+        alert("Not Found")
         
       } else {
         this.searchData=response

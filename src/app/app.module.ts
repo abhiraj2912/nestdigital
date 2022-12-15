@@ -13,7 +13,12 @@ import { ViewSecurityComponent } from './view-security/view-security.component';
 import { ViewVistorLogComponent } from './view-vistor-log/view-vistor-log.component';
 import { ViewEmployeeLogComponent } from './view-employee-log/view-employee-log.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
-import { AdminLoginComponent } from './admin-login/admin-login.component'
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { SecurityProfileComponent } from './security-profile/security-profile.component';
+import { AddVistorLogComponent } from './add-vistor-log/add-vistor-log.component';
+import { AddEmployeeLogComponent } from './add-employee-log/add-employee-log.component';
+import { SecurityNavbarComponent } from './security-navbar/security-navbar.component';
+import { SecurityLoginComponent } from './security-login/security-login.component'
 
 const myRoute:Routes=[
   {
@@ -43,6 +48,22 @@ const myRoute:Routes=[
   {
     path:"viewsec",
     component:ViewSecurityComponent
+  },
+  {
+    path:"addemplog",
+    component:AddEmployeeLogComponent
+  },
+  {
+    path:"addvislog",
+    component:AddVistorLogComponent
+  },
+  {
+    path:"seclogin",
+    component:SecurityLoginComponent
+  },
+  {
+    path:"secprofile",
+    component:SecurityProfileComponent
   }
 
 ]
@@ -57,7 +78,12 @@ const myRoute:Routes=[
     ViewVistorLogComponent,
     ViewEmployeeLogComponent,
     AdminNavbarComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    SecurityProfileComponent,
+    AddVistorLogComponent,
+    AddEmployeeLogComponent,
+    SecurityNavbarComponent,
+    SecurityLoginComponent
   ],
   imports: [
     BrowserModule,
