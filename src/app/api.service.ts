@@ -48,4 +48,24 @@ export class ApiService {
   employeeLogByDate=(empDate:any)=>{
     return this.http.post("http://localhost:8080/emplogdate",empDate)
   }
+
+  addVistorLog=(vdate:any)=>{
+    return this.http.post("http://localhost:8080/addvisitorlog",vdate)
+  }
+  addEmployeeLog=(edate:any)=>{
+    return this.http.post("http://localhost:8080/addemployeelog",edate)
+  }
+
+  securityLogin=(slData:any)=>{
+    return this.http.post("http://localhost:8080/seclogin",slData)
+  }
+
+  securityProfile=(sData:any)=>{
+    return this.http.post("http://localhost:8080/secinfo",sData)
+  }
+
+  fetchId=(data:any)=>{
+    return this.http.post("http://localhost:8080/fetchempid",data)
+  }
+  
 }
