@@ -1,0 +1,20 @@
+<app-employee-navbar></app-employee-navbar>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Name: {{data[0].name}}</h5>
+                  <h5 class="card-title">Designation: {{data[0].designation}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">Phone: {{data[0].phone}}</li>
+                  <li class="list-group-item">Email: {{data[0].email}}</li>
+                  <li class="list-group-item">Address : {{data[0].address}}</li>
+                  <li class="list-group-item">Salary : {{data[0].salary}}</li>
+                  <li class="list-group-item">Username: {{data[0].username}}</li>
+                </ul>
+              </div>
+        </div>
+    </div>
+</div>
