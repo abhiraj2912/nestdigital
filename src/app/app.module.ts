@@ -26,7 +26,11 @@ import { EmployeePendingLeaveComponent } from './employee-pending-leave/employee
 import { EmployeeViewLeaveComponent } from './employee-view-leave/employee-view-leave.component';
 import { EmployeeNavbarComponent } from './employee-navbar/employee-navbar.component';
 import { AdminLeaveComponent } from './admin-leave/admin-leave.component';
-import { AdminViewLeaveComponent } from './admin-view-leave/admin-view-leave.component'
+import { AdminViewLeaveComponent } from './admin-view-leave/admin-view-leave.component';
+import { SecurityVisitorLogComponent } from './security-visitor-log/security-visitor-log.component';
+import { SecurityEmployeeLogComponent } from './security-employee-log/security-employee-log.component';
+import { AddVisitorExitLogComponent } from './add-visitor-exit-log/add-visitor-exit-log.component';
+import { AddEmployeeExitLogComponent } from './add-employee-exit-log/add-employee-exit-log.component'
 
 const myRoute:Routes=[
   {
@@ -100,6 +104,22 @@ const myRoute:Routes=[
   {
     path:"adminviewleave",
     component:AdminViewLeaveComponent
+  },
+  {
+    path:"addexitlogemp",
+    component:AddEmployeeExitLogComponent
+  },
+  {
+    path:"addexitlogvis",
+    component:AddVisitorExitLogComponent
+  },
+  {
+    path:"secviewvislog",
+    component:SecurityVisitorLogComponent
+  },
+  {
+    path:"secviewemplog",
+    component:SecurityEmployeeLogComponent
   }
 
 ]
@@ -127,7 +147,11 @@ const myRoute:Routes=[
     EmployeeViewLeaveComponent,
     EmployeeNavbarComponent,
     AdminLeaveComponent,
-    AdminViewLeaveComponent
+    AdminViewLeaveComponent,
+    SecurityVisitorLogComponent,
+    SecurityEmployeeLogComponent,
+    AddVisitorExitLogComponent,
+    AddEmployeeExitLogComponent
   ],
   imports: [
     BrowserModule,

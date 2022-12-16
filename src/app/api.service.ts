@@ -99,4 +99,20 @@ export class ApiService {
   adminViewLeave=()=>{
     return this.http.get("http://localhost:8080/viewallleave")
   }
+
+  securityVisitorExit=(vExitData:any)=>{
+    return this.http.post("http://localhost:8080/addvisitorexitlog",vExitData)
+  }
+
+  securityEmployeeExit=(eExitData:any)=>{
+    return this.http.post("http://localhost:8080/addempexitlog",eExitData)
+  }
+
+  empLogByEmpCode=(empCode:any)=>{
+    return this.http.post("http://localhost:8080/emplogtoday",empCode)
+  }
+
+  visLogByName=(visName:any)=>{
+    return this.http.post("http://localhost:8080/visitorbyname",visName)
+  }
 }

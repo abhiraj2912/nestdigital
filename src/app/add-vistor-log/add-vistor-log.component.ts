@@ -13,7 +13,7 @@ export class AddVistorLogComponent {
   whomToMeet=""
   date=""
   entryTime=""
-  exitTime=""
+  exitTime="Not Available"
 
   constructor(private api:ApiService){}
 
@@ -31,7 +31,6 @@ export class AddVistorLogComponent {
           this.whomToMeet=""
           this.date=""
           this.entryTime=""
-          this.exitTime=""
       } else {
         alert("Something went wrong")
       }

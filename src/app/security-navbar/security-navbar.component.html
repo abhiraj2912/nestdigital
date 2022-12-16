@@ -1,18 +1,39 @@
-<nav class="navbar navbar-expand-lg bg-light">
+
+  <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" routerLink="/secprofile">Nest Digital</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link active" aria-current="" routerLink="/secprofile">View Profile</a>
-          <a class="nav-link" routerLink="/addemplog">Add Employee Log</a>
-          <a class="nav-link" routerLink="/addvislog">Add Vistor Log</a>
-          <!-- <a class="nav-link" routerLink="/vistorlog">Vistor Log</a>
-          <a class="nav-link" routerLink="/emplog">Admin Log</a> -->
-          <a class="nav-link" routerLink="">LogOut</a>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/secprofile">My Profile</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Vistor Log
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/addvislog">Add Entry Log</a></li>
+              <li><a class="dropdown-item" routerLink="/addexitlogvis">Add Exit Log</a></li>
+              <li><a class="dropdown-item" routerLink="/secviewvislog">View Log</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Employee Log
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/addemplog">Add Entry Log</a></li>
+              <li><a class="dropdown-item" routerLink="/addexitlogemp">Add Exit Log</a></li>
+              <li><a class="dropdown-item" routerLink="/secviewemplog">View Log</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="">Logout</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>
