@@ -1,0 +1,40 @@
+<app-security-navbar></app-security-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h2>Exit Log</h2>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Vistor Name</label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of searchData">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">{{i.name}}</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Purpose: {{i.purpose}}</li>
+                          <li class="list-group-item">Whom To Meet: {{i.whomToMeet}}</li>
+                          <li class="list-group-item">entryTime: {{i.entryTime}}</li>
+                        </ul>
+                        <div class="card-body">
+                            <label for="" class="form-label">exitTime</label>
+                            <input name="exitTime" [(ngModel)]="exitTime" type="text" class="form-control">
+                        </div>
+                        <div class="card-body">
+                            <button (click)="addExitLog(i.id)" class="btn btn-success">Add</button>
+                        </div>
+                      </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>

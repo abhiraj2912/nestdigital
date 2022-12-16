@@ -1,0 +1,43 @@
+<app-security-navbar></app-security-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <h2>Exit Log</h2>
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Employee Code</label>
+                    <input name="empCode" [(ngModel)]="empCode" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+            <div class="row g-3 mt-4">
+                <div class="col col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 col-xxl-3" *ngFor="let i of searchData">
+                    <div class="card">
+                        <img height="200px" src="https://png.pngtree.com/png-vector/20220901/ourmid/pngtree-male-company-employee-avatar-icon-wearing-a-necktie-png-image_6133877.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">{{i.name}}</h5>
+                          <p class="card-text">Code: {{i.emp_code}}</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Designation: {{i.designation}}</li>
+                          <li class="list-group-item">Date: {{i.date}}</li>
+                          <li class="list-group-item">Entry Time: {{i.entry_time}}</li>
+                        </ul>
+                        <div class="card-body">
+                            <label for="" class="form-label">exitTime</label>
+                            <input name="exitTime" [(ngModel)]="exitTime" type="text" class="form-control">
+                        </div>
+                        <div class="card-body">
+                            <button (click)="addExitLog(i.id)" class="btn btn-success">Add</button>
+                        </div>
+                      </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+</div>
+

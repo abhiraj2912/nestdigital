@@ -11,7 +11,7 @@ export class AddEmployeeLogComponent {
   empCode=""
   date=""
   entryTime=""
-  exitTime=""
+  exitTime="Not Available"
 
   constructor(private api:ApiService){}
 
@@ -34,8 +34,11 @@ export class AddEmployeeLogComponent {
           this.empCode=""
           this.date=""
           this.entryTime=""
-          this.exitTime=""
-          } else {
+          }
+          else if(response.status=="failed"){
+            alert("Login Not Allowed Employee on leave")
+          }
+          else {
             alert("Something went wrong")
           }
       }
@@ -45,7 +48,6 @@ export class AddEmployeeLogComponent {
         }
       }
     )
-
 
   }
 

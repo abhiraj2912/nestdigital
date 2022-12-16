@@ -87,5 +87,36 @@ export class ApiService {
   myPendingLeave=(mpData:any)=>{
     return this.http.post("http://localhost:8080/empViewPending",mpData)
   }
+
+  adminPendingLeave=()=>{
+    return this.http.get("http://localhost:8080/viewleave")
+  }
+
+  adminLeaveStatus=(statusData:any)=>{
+    return this.http.post("http://localhost:8080/updatestatus",statusData)
+  }
   
+  adminViewLeave=()=>{
+    return this.http.get("http://localhost:8080/viewallleave")
+  }
+
+  securityVisitorExit=(vExitData:any)=>{
+    return this.http.post("http://localhost:8080/addvisitorexitlog",vExitData)
+  }
+
+  securityEmployeeExit=(eExitData:any)=>{
+    return this.http.post("http://localhost:8080/addempexitlog",eExitData)
+  }
+
+  empLogByEmpCode=(empCode:any)=>{
+    return this.http.post("http://localhost:8080/emplogtoday",empCode)
+  }
+
+  visLogByName=(visName:any)=>{
+    return this.http.post("http://localhost:8080/visitorbyname",visName)
+  }
+
+  getLeaveCount=(empID:any)=>{
+    return this.http.post("http://localhost:8080/getcount",empID)
+  }
 }

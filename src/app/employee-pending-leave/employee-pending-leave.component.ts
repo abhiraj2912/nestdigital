@@ -12,6 +12,7 @@ export class EmployeePendingLeaveComponent {
   empID:any=localStorage.getItem("userInfo")
   constructor(private api:ApiService){
     let data:any={"empId":this.empID}
+    
     api.myPendingLeave(data).subscribe(
       (response:any)=>{
         this.searchData=response
