@@ -15,9 +15,9 @@
                     <label for="" class="form-label">Leave Type</label>
                     <select name="leaveType" [(ngModel)]="leaveType" class="form-select" aria-label="Default select example">
                         <option selected>Select Type</option>
-                        <option value="General">General</option>
-                        <option value="Sick">Sick</option>
-                        <option value="Special">Special</option>
+                        <option value="Casual">Casual (Count: {{count[0].casualLeave}})</option>
+                        <option value="Sick">Sick (Count: {{count[0].sickLeave}})</option>
+                        <option value="Special">Special (Count: {{count[0].specialLeave}})</option>
                       </select>
                 </div>
                 <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">

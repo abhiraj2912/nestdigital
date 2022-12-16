@@ -34,7 +34,11 @@ export class AddEmployeeLogComponent {
           this.empCode=""
           this.date=""
           this.entryTime=""
-          } else {
+          }
+          else if(response.status=="failed"){
+            alert("Login Not Allowed Employee on leave")
+          }
+          else {
             alert("Something went wrong")
           }
       }

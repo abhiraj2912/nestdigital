@@ -9,16 +9,24 @@ import { ApiService } from '../api.service';
 export class EmployeeProfileComponent {
 
   userID:any=""
-   data:any=[]
-   empCode:any=""
+  data:any=[]
+  empCode:any=""
+  count:any=[]
+  
+
   constructor(private api:ApiService){
     this.userID=localStorage.getItem("userInfo")
+    
     let data:any={"id":this.userID}
     api.employeeProfile(data).subscribe(
       (response:any)=>{
         this.data=response
-        
-        
+      }
+    )
+    let data2={"empId":this.userID}
+    api.getLeaveCount(data2).subscribe(
+      (response)=>{
+        this.count=response
       }
     )
   }

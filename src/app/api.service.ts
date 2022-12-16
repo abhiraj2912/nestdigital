@@ -115,4 +115,8 @@ export class ApiService {
   visLogByName=(visName:any)=>{
     return this.http.post("http://localhost:8080/visitorbyname",visName)
   }
+
+  getLeaveCount=(empID:any)=>{
+    return this.http.post("http://localhost:8080/getcount",empID)
+  }
 }
