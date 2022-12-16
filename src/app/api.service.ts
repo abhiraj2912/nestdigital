@@ -87,5 +87,16 @@ export class ApiService {
   myPendingLeave=(mpData:any)=>{
     return this.http.post("http://localhost:8080/empViewPending",mpData)
   }
+
+  adminPendingLeave=()=>{
+    return this.http.get("http://localhost:8080/viewleave")
+  }
+
+  adminLeaveStatus=(statusData:any)=>{
+    return this.http.post("http://localhost:8080/updatestatus",statusData)
+  }
   
+  adminViewLeave=()=>{
+    return this.http.get("http://localhost:8080/viewallleave")
+  }
 }

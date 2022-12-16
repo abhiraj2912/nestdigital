@@ -24,7 +24,9 @@ import { EmployeeProfileComponent } from './employee-profile/employee-profile.co
 import { EmployeeLeaveApplyComponent } from './employee-leave-apply/employee-leave-apply.component';
 import { EmployeePendingLeaveComponent } from './employee-pending-leave/employee-pending-leave.component';
 import { EmployeeViewLeaveComponent } from './employee-view-leave/employee-view-leave.component';
-import { EmployeeNavbarComponent } from './employee-navbar/employee-navbar.component'
+import { EmployeeNavbarComponent } from './employee-navbar/employee-navbar.component';
+import { AdminLeaveComponent } from './admin-leave/admin-leave.component';
+import { AdminViewLeaveComponent } from './admin-view-leave/admin-view-leave.component'
 
 const myRoute:Routes=[
   {
@@ -90,6 +92,14 @@ const myRoute:Routes=[
   {
     path:"emplogin",
     component:EmployeeLoginComponent
+  },
+  {
+    path:"adminleave",
+    component:AdminLeaveComponent
+  },
+  {
+    path:"adminviewleave",
+    component:AdminViewLeaveComponent
   }
 
 ]
@@ -115,7 +125,9 @@ const myRoute:Routes=[
     EmployeeLeaveApplyComponent,
     EmployeePendingLeaveComponent,
     EmployeeViewLeaveComponent,
-    EmployeeNavbarComponent
+    EmployeeNavbarComponent,
+    AdminLeaveComponent,
+    AdminViewLeaveComponent
   ],
   imports: [
     BrowserModule,
