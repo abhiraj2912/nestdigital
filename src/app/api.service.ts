@@ -67,5 +67,25 @@ export class ApiService {
   fetchId=(data:any)=>{
     return this.http.post("http://localhost:8080/fetchempid",data)
   }
+
+  employeeLogin=(elData:any)=>{
+    return this.http.post("http://localhost:8080/emplogin",elData)
+  }
+
+  employeeProfile=(sData:any)=>{
+    return this.http.post("http://localhost:8080/empinfo",sData)
+  }
+
+  applyLeave=(lData:any)=>{
+    return this.http.post("http://localhost:8080/applyleave",lData)
+  }
+
+  myLeave=(myData:any)=>{
+    return this.http.post("http://localhost:8080/myleave",myData)
+  }
+
+  myPendingLeave=(mpData:any)=>{
+    return this.http.post("http://localhost:8080/empViewPending",mpData)
+  }
   
 }

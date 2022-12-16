@@ -1,0 +1,33 @@
+<app-employee-navbar></app-employee-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-5">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">From Date</label>
+                    <input name="fromDate" [(ngModel)]="fromDate" type="date" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">To Date</label>
+                    <input name="toDate" [(ngModel)]="toDate" type="date" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Leave Type</label>
+                    <select name="leaveType" [(ngModel)]="leaveType" class="form-select" aria-label="Default select example">
+                        <option selected>Select Type</option>
+                        <option value="General">General</option>
+                        <option value="Sick">Sick</option>
+                        <option value="Special">Special</option>
+                      </select>
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">Remarks</label>
+                    <input name="remarks" [(ngModel)]="remarks" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" class="btn btn-success">Apply</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

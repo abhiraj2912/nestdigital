@@ -18,7 +18,13 @@ import { SecurityProfileComponent } from './security-profile/security-profile.co
 import { AddVistorLogComponent } from './add-vistor-log/add-vistor-log.component';
 import { AddEmployeeLogComponent } from './add-employee-log/add-employee-log.component';
 import { SecurityNavbarComponent } from './security-navbar/security-navbar.component';
-import { SecurityLoginComponent } from './security-login/security-login.component'
+import { SecurityLoginComponent } from './security-login/security-login.component';
+import { EmployeeLoginComponent } from './employee-login/employee-login.component';
+import { EmployeeProfileComponent } from './employee-profile/employee-profile.component';
+import { EmployeeLeaveApplyComponent } from './employee-leave-apply/employee-leave-apply.component';
+import { EmployeePendingLeaveComponent } from './employee-pending-leave/employee-pending-leave.component';
+import { EmployeeViewLeaveComponent } from './employee-view-leave/employee-view-leave.component';
+import { EmployeeNavbarComponent } from './employee-navbar/employee-navbar.component'
 
 const myRoute:Routes=[
   {
@@ -64,6 +70,26 @@ const myRoute:Routes=[
   {
     path:"secprofile",
     component:SecurityProfileComponent
+  },
+  {
+    path:"empprofile",
+    component:EmployeeProfileComponent
+  },
+  {
+    path:"applyleave",
+    component:EmployeeLeaveApplyComponent
+  },
+  {
+    path:"leavestatus",
+    component:EmployeePendingLeaveComponent
+  },
+  {
+    path:"viewleave",
+    component:EmployeeViewLeaveComponent
+  },
+  {
+    path:"emplogin",
+    component:EmployeeLoginComponent
   }
 
 ]
@@ -83,7 +109,13 @@ const myRoute:Routes=[
     AddVistorLogComponent,
     AddEmployeeLogComponent,
     SecurityNavbarComponent,
-    SecurityLoginComponent
+    SecurityLoginComponent,
+    EmployeeLoginComponent,
+    EmployeeProfileComponent,
+    EmployeeLeaveApplyComponent,
+    EmployeePendingLeaveComponent,
+    EmployeeViewLeaveComponent,
+    EmployeeNavbarComponent
   ],
   imports: [
     BrowserModule,
